@@ -9,13 +9,14 @@
 //= require_tree .
 //= require_self
 //= require bootstrap
+//= require handlebars
 
 if (typeof jQuery !== 'undefined') {
-	(function($) {
-		$('#spinner').ajaxStart(function() {
-			$(this).fadeIn();
-		}).ajaxStop(function() {
-			$(this).fadeOut();
-		});
-	})(jQuery);
+  (function ($) {
+    $('#spinner').ajaxStart(function () {
+      $(this).fadeIn();
+    }).ajaxStop(function () {
+      $(this).fadeOut();
+    });
+  })(jQuery);
 }

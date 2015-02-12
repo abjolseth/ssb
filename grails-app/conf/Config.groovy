@@ -46,6 +46,10 @@ grails.assets.less.compile = 'less4j'
 grails.assets.plugin."twitter-bootstrap".excludes = ["**/*.less"]
 grails.assets.plugin."twitter-bootstrap".includes = ["bootstrap.less"]
 
+// Handlebars
+//grails.assets.handlebars.templateRoot = "templates"
+//grails.assets.handlebars.templatePathSeperator = "/"
+
 // GSP settings
 grails {
     views {
