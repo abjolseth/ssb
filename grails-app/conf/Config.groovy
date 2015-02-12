@@ -41,6 +41,11 @@ grails.views.default.codec = "html"
 // If unspecified, controllers are prototype scoped.
 grails.controllers.defaultScope = 'singleton'
 
+// LESS settings; ABJ
+grails.assets.less.compile = 'less4j'
+grails.assets.plugin."twitter-bootstrap".excludes = ["**/*.less"]
+grails.assets.plugin."twitter-bootstrap".includes = ["bootstrap.less"]
+
 // GSP settings
 grails {
     views {
