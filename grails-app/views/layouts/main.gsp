@@ -48,12 +48,13 @@
 </header>
 
 <g:layoutBody/>
+<%--
 <footer class="footer">
     <div class="container">
         <p class="text-muted">Place sticky footer content here.</p>
     </div>
 </footer>
-
+--%>
 <div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 </body>
 </html>
