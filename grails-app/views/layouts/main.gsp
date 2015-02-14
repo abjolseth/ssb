@@ -18,10 +18,41 @@
 </head>
 
 <body>
-<div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a>
-</div>
+
+<header class="navbar navbar-inverse navbar-static-top ssb-docs-nav" id="top" role="banner">
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+            <a class="navbar-brand" href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a>
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="../getting-started/">Getting started</a>
+                </li>
+                <li class="active">
+                    <a href="../css/">CSS</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://expo.getbootstrap.com">Expo</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
 <g:layoutBody/>
-<div class="footer" role="contentinfo"></div>
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+    </div>
+</footer>
 
 <div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 </body>
