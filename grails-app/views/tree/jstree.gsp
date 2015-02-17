@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-3">
             <g:render template="/tpl/menu"/>
@@ -26,17 +26,9 @@
 
         <div class="col-md-9">
             <div class="row">
-                <%--
-                <div class="btn-group" role="group" aria-label="ajaxToolbar">
-                    <button id="get" type="button" class="btn btn-default">GET</button>
-                    <button id="post" type="button" class="btn btn-default">POST</button>
-                    <button type="button" class="btn btn-default">Right</button>
-                </div>
-                --%>
                 <select class="selectpicker" data-live-search="true" data-size="auto">
                     <option>Mustard</option>
                     <option>Ketchup</option>
-                    <option>Relish</option>
                 </select>
             </div>
             <div class="row">
