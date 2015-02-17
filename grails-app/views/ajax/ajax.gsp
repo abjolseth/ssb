@@ -14,6 +14,8 @@
     <script>
         var onSuccess = function(response){
             console.log(response);
+            var json = JSON.parse(response);
+            $('#ajaxresult').text(response);
         };
         function onFailure(){
             console.log('onFailure');
@@ -22,7 +24,7 @@
 </head>
 
 <body>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-3">
             <g:render template="/tpl/menu"/>
@@ -34,10 +36,12 @@
                 <div class="btn-group" role="group" aria-label="ajaxToolbar">
                     <button id="get" type="button" class="btn btn-default">GET</button>
                     <button id="post" type="button" class="btn btn-default">POST</button>
-                    <button type="button" class="btn btn-default">Right</button>
                 </div>
+
+                <code id="ajaxresult"></code>
             </div>
         </div>
+    </div>
     </div>
 </div>
 <script>
@@ -52,6 +56,7 @@
             console.log(obj.hello);
             */
             var json = $.parseJSON(result);
+            $('#ajaxresult').text(json);
             console.log(json);
         });
         /*
@@ -69,8 +74,9 @@
     $('#post').click(function() {
         var param = {postid:'post-message'};
         $.post('/ssb/ajax/postaction', param, function (responseObj, textStatus) {
-            console.log('responseObj',responseObj);
             console.log('textStatus',textStatus);
+            console.log('responseObj',responseObj);
+            $('#ajaxresult').text(responseObj);
 
         });
     });

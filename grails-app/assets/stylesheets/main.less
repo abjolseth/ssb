@@ -1,5 +1,11 @@
-html {
-  /*
+
+/*
+* Base structure
+*/
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
   background-color: #ddd;
   background-image: -moz-linear-gradient(center top, #aaa, #ddd);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa), color-stop(1, #ddd));
@@ -7,39 +13,173 @@ html {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#aaaaaa', EndColorStr='#dddddd');
   background-repeat: no-repeat;
   height: 100%;
+  /* change the box model to exclude the padding from the calculation of 100% height (IE8+) */
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  */
-  color: #333333;
-  background-color: #f7f7f7;
 }
 
-body {
-  background: #f7f7f7;
-  color: #333333;
-  /*
-  margin: 0 auto;
-  overflow-x: hidden;
-  //AB;-moz-box-shadow: 0 0 0.3em #255b17;
-  -webkit-box-shadow: 0 0 0.3em #255b17;
-  box-shadow: 0 0 0.3em #255b17;
-  */
-}
+
 /*
-#grailsLogo {
-  background-color: #337ab7;
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
 }
 
-#grailsLogo a {
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
   display: inline-block;
-  margin: 1em;
+  border-radius: 50%;
+}
+/*FROM Grails defaults*/
+.spinner {
+  background: url(../images/spinner.gif) 50% 50% no-repeat transparent;
+  height: 16px;
+  width: 16px;
+  padding: 0.5em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-indent: -9999px;
+}
+/* NAVIGATION MENU */
+
+/*
+.nav {
+  background-color: #efefef;
+  padding: 0.5em 0.75em;
+  -moz-box-shadow: 0 0 3px 1px #aaaaaa;
+  -webkit-box-shadow: 0 0 3px 1px #aaaaaa;
+  box-shadow: 0 0 3px 1px #aaaaaa;
+  zoom: 1;
 }
 */
-.ssb-docs-nav {
-  background-color: #337ab7;
+.navbar-inverse {
+  background-color: #23527c;
+  border-color: #080808;
+}
+.highlight {
+  padding: 9px 14px;
+  margin-bottom: 14px;
+  background-color: lavender;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+}
+/*
+.nav a {
+  color: #666666;
+  display: block;
+  padding: 0.25em 0.7em;
+  text-decoration: none;
+  -moz-border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+  border-radius: 0.3em;
+}
 
+.nav a:active, .nav a:visited {
+  color: #666666;
 }
-.navbar-brand {
-  height: 70px;
+
+.nav a:focus, .nav a:hover {
+  background-color: #999999;
+  color: #ffffff;
+  outline: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
+
+.no-borderradius .nav a:focus, .no-borderradius .nav a:hover {
+  background-color: transparent;
+  color: #444444;
+  text-decoration: underline;
+}
+
+.nav a.home, .nav a.list, .nav a.create {
+  background-position: 0.7em center;
+  background-repeat: no-repeat;
+  text-indent: 25px;
+}
+*/
